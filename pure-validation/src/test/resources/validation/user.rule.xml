@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<validation>
+	<!-- 验证组ID，全局唯一 -->
+	<group name="user.rule">
+		<!-- 验证字段 -->
+		<field name="email">
+			<rule name="required" message="邮件必须填写"/>
+			<rule name="size" message="邮件长度应该3-100之间">
+				<param name="min" value="3"/>
+				<param name="max" value="100"/>
+			</rule>
+			<rule name="pattern" message="邮件格式不正确">
+				<param name="regex" value="^[A-Za-z]+[\.\-_A-Za-z0-9]*@[A-Za-z0-9]+[\.\-_A-Za-z0-9]*$"/>
+			</rule>
+		</field>
+		<field name="password">
+			<rule name="required" message="密码必须填写" />
+			<rule name="min" message="密码至少8个字符">
+				<param name="value" value="9" />
+			</rule>
+			<rule name="max" message="密码最多20个字符">
+				<param name="value" value="20" />
+			</rule>
+			<rule name="equals" message="两次密码输入不正确">
+				<param name="target" value="passwordOne" />
+			</rule>
+		</field>
+		<field name="starttime">
+			<rule name="timestampMax" message="开始时间不能大于结束时间">
+				<param name="target" value="endtime" />
+			</rule>
+		</field>
+		<field name="endtime">
+			<rule name="timestampMin" message="结束时间不能小于开始时间">
+				<param name="target" value="starttime" />
+			</rule>
+		</field>
+		<field name="age">
+			<rule name="decimalMin" message="年龄要大于30岁">
+				<param name="value" value="30" />
+			</rule>
+			<rule name="decimalMax" message="年龄要小于或等于50岁">
+				<param name="inclusive" value="true" />
+				<param name="value" value="50" />
+			</rule>
+		</field>
+		<field name="address">
+			<rule name="required" message="地址必须填写" />
+		</field>
+		<field name="postcode">
+			<rule name="equals" message="邮编必须为440000">
+				<param name="value" value="440000" />
+			</rule>
+		</field>
+		<field name="stars">
+			<rule name="decimalMin" message="星星数量要大于5">
+				<param name="value" value="5" />
+			</rule>
+		</field>
+	</group>
+</validation>

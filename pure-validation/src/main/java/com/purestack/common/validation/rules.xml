@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<validation>
+	<!-- include 标签导入其他配置 -->
+<!--	<include file="validationinfo/basic/another-rules.fo.xml"/>-->
+
+	<!-- 验证组ID，全局唯一 -->
+	<group name="user.validate">
+		<!-- 验证字段 -->
+		<field name="email">
+			<!--
+				规则列表
+			-->
+			<rule name="required" message="邮件必须填写"/>
+			<rule name="between" message="邮件长度应该3-100之间">
+				<param name="min" value="3"/>
+				<param name="max" value="100"/>
+			</rule>
+			<rule name="match" message="邮件格式不正确">
+				<param name="regex" value="^[A-Za-z]+[\.\-_A-Za-z0-9]*@[A-Za-z0-9]+[\.\-_A-Za-z0-9]*$"/>
+			</rule>
+		</field>
+	</group>
+</validation>

@@ -1,0 +1,36 @@
+plugins {
+    id 'java'
+}
+
+group 'com.rjgf.rjcloud'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    testImplementation group: 'org.springframework.boot', name: 'spring-boot-starter-test'
+
+    implementation 'log4j:log4j:1.2.17'
+    implementation 'commons-lang:commons-lang:2.4'
+    implementation 'commons-beanutils:commons-beanutils:1.8.0'
+    implementation 'dom4j:dom4j:1.6.1'
+    implementation 'org.springframework:spring-context:3.2.8.RELEASE'
+}
+
+test {
+
+    useJUnitPlatform()
+
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<validators>
+	<validator name="required" class="com.purestack.common.validation.validators.RequiredValidator"/>
+	<validator name="pattern" class="com.purestack.common.validation.validators.PatternValidator"/>
+	<validator name="size" class="com.purestack.common.validation.validators.SizeValidator"/>
+	<validator name="min" class="com.purestack.common.validation.validators.MinValidator"/>
+	<validator name="max" class="com.purestack.common.validation.validators.MaxValidator"/>
+	<validator name="equals" class="com.purestack.common.validation.validators.EqualsValidator"/>
+	<validator name="timestampMax" class="com.purestack.common.validation.validators.TimestampMaxValidator"/>
+	<validator name="timestampMin" class="com.purestack.common.validation.validators.TimestampMinValidator"/>
+	<validator name="decimalMax"  class="com.purestack.common.validation.validators.DecimalMaxValidator"/>
+	<validator name="decimalMin"  class="com.purestack.common.validation.validators.DecimalMinValidator"/>
+	<validator name="spring"  useSpring="true" class="com.purestack.common.validation.validators.SpringValidator"/>
+</validators>

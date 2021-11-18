@@ -1,0 +1,6 @@
+f10:32:07,905  INFO BasicValidateConfig:44 - read validation rule group config : validation/rules.xml
+l10:32:07,965  INFO BasicValidateConfig:77 - read include validation rule config : validation/user.rule.xml
+o10:32:07,970  INFO BasicValidateConfig:77 - read include validation rule config : validation/article.rule.xml
+a10:32:07,972  INFO BasicValidateConfig:171 - read validators config : validation/validators.xml
+D10:32:08,317  INFO ValidationTest:50 - 验证失败，结果如下
+�10:32:08,318  INFO ValidationTest:51 - {email=邮件格式不正确, password=密码至少8个字符, starttime=开始时间不能大于结束时间, endtime=结束时间不能小于开始时间, age=年龄要小于或等于50岁, address=地址必须填写, postcode=邮编必须为440000, stars=星星数量要大于5}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<validation>
+	<!-- 验证组ID，全局唯一 -->
+	<group name="article.rule">
+		<!-- 验证字段 -->
+		<field name="text">
+			<!-- 规则列表 -->
+			<rule name="required" message="内容必須填寫" />
+			<rule name="between" message="长度应该100-10000之间">
+				<param name="min" value="100" />
+				<param name="max" value="10000" />
+			</rule>
+		</field>
+	</group>
+</validation>

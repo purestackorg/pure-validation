@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<validators>
+	<validator name="required" class="com.rjgf.rjcloud.validation.validators.RequiredValidator"/>
+	<validator name="pattern" class="com.rjgf.rjcloud.validation.validators.PatternValidator"/>
+	<validator name="size" class="com.rjgf.rjcloud.validation.validators.SizeValidator"/>
+	<validator name="min" class="com.rjgf.rjcloud.validation.validators.MinValidator"/>
+	<validator name="max" class="com.rjgf.rjcloud.validation.validators.MaxValidator"/>
+	<validator name="equals" class="com.rjgf.rjcloud.validation.validators.EqualsValidator"/>
+	<validator name="timestampMax" class="com.rjgf.rjcloud.validation.validators.TimestampMaxValidator"/>
+	<validator name="timestampMin" class="com.rjgf.rjcloud.validation.validators.TimestampMinValidator"/>
+	<validator name="decimalMax"  class="com.rjgf.rjcloud.validation.validators.DecimalMaxValidator"/>
+	<validator name="decimalMin"  class="com.rjgf.rjcloud.validation.validators.DecimalMinValidator"/>
+	<validator name="spring"  useSpring="true" class="com.rjgf.rjcloud.validation.validators.SpringValidator"/>
+</validators>
